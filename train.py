@@ -27,8 +27,7 @@ class PredictionCallback(tf.keras.callbacks.Callback):
 
     def on_epoch_end(self, epoch, logs={}):
         """SAVING MODEL IF YOU WANT"""
-        self.model.save('models/Transformer_'+ str('final')+ str(epoch)+'.keras')
-        self.model.save_weights('models/Weights_Transformer_'+ str('final')+ str(epoch)+'.keras')
+        self.model.save_weights('models/Weights_Transformer_'+ str('final')+ str(epoch)+'.h5')
         num_words_to_generate = 200
         generated_text = 'za górami za lasami żył sobie piękna dziewczynka, '
         start = [0]
